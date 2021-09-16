@@ -4,25 +4,34 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Documentacion</title>
+    <title>TuPostInc | Documentacion</title>
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
-      
     <header class="hero">
       <div class="container">
         <nav class="nav">
-          <a href="#" class="nav__items nav__items--cta">Codigo</a>
-          <a href="#" class="nav__items">librerias</a>
-          <a href="#" class="nav__items">funciones</a>
+          <a
+            href="https://github.com/user-novak/posting_system"
+            target="_blank"
+            class="nav__items nav__items--cta"
+            >Codigo</a
+          >
+          <a href="#librerias" class="nav__items">librerias</a>
+          <a href="#funciones" class="nav__items">funciones</a>
         </nav>
 
         <section class="hero__container">
           <div class="hero__texts">
             <h1 class="hero__title">TuPostInc</h1>
             <h2 class="hero__subtitle">Encuentra lo que buscas</h2>
-            <a class="hero__cta" href="#">consigue el codigo</a>
+            <a
+              class="hero__cta"
+              href="https://github.com/user-novak/posting_system"
+              target="_blank"
+              >consigue el codigo</a
+            >
           </div>
         </section>
       </div>
@@ -42,176 +51,265 @@
     </header>
 
     <main>
+      <!-- header section -->
+      <section class="presentation container">
+        <img src="assets/home.png" alt="home" class="presentation__picture" />
+        <h2 class="subtitle">La casa de los posts</h2>
+        <p class="presentation__copy">
+          La aplicación que se dedica netamente a promocionar sus productos o
+          servicios <br />
+          Encuentre lo que busca sin la necesidad de registrarse <br />
+          Interfaz simple y eficaz
+        </p>
+        <a
+          href="https://github.com/user-novak/posting_system"
+          target="_blank"
+          class="presentation__cta"
+          >consigue el codigo</a
+        >
+      </section>
 
-        <!-- header section -->
-        <section class="presentation container">
-            <img src="assets/home.png" alt="home" class="presentation__picture">
-            <h2 class="subtitle">La casa de los posts</h2>
-            <p class="presentation__copy">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero autem placeat perspiciatis facilis officiis doloribus dolorum quo, explicabo consequuntur corrupti quaerat impedit, aperiam provident expedita natus! Eius incidunt accusamus voluptatem?
+      <!-- contet section -->
+      <section id="librerias" class="about container">
+        <!-- librerias -->
+        <div class="about__texts">
+          <h2 class="subtitle">Librerias:</h2>
+          <p class="about__paragraph">
+            <b>Laravel Jetstream </b> es un kit de inicio de aplicación
+            bellamente diseñado para Laravel y proporciona el punto de partida
+            perfecto para su próxima aplicación de Laravel. Jetstream
+            proporciona la implementación para el inicio de sesión, registro,
+            verificación de correo electrónico, autenticación de dos factores,
+            administración de sesiones, API a través de Laravel Sanctum y
+            funciones opcionales de administración de equipos.
+          </p>
+          <a
+            href="https://jetstream.laravel.com/2.x/introduction.html"
+            target="_blank"
+            >ir a laravel Jetstream</a
+          >
+        </div>
+
+        <figure class="about__img">
+          <img src="assets/jetstream.png" alt="css" class="about__picture" />
+        </figure>
+
+        <div class="about__texts">
+          <p class="about__paragraph">
+            <b>Tailwind CSS</b>  es un framework CSS de bajo nivel altamente
+            personalizable que le permite crear diseños personalizados
+            eliminando los estilos de componentes pre-definidos que necesitarías
+            sobre-escribir en todo caso
+          </p>
+          <a href="https://tailwindcss.com/docs" target="_blank">ir hacia tailwindcss</a>
+        </div>
+
+        <figure class="about__img">
+          <img src="assets/tailwindcss.png" alt="css" class="about__picture" />
+        </figure>
+        <!-- funciones -->
+
+        <figure id="funciones" class="about__img about__img--left">
+          <img src="assets/beer.svg" alt="beer" class="about__picture" />
+        </figure>
+
+        <div class="about__texts">
+          <h2 class="subtitle">Funciones:</h2>
+          <p class="about__paragraph">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis
+            vel quia voluptatem cupiditate soluta blanditiis beatae
+            reprehenderit totam fugit. Minus ipsum est rem adipisci aperiam et
+            placeat consequuntur nihil hic.
+          </p>
+          <p class="about__paragraph">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis
+            vel quia voluptatem cupiditate soluta blanditiis beatae
+            reprehenderit totam fugit. Minus ipsum est rem adipisci aperiam et
+            placeat consequuntur nihil hic.
+          </p>
+        </div>
+
+        <figure class="about__img about__img--left">
+          <img src="assets/beer.svg" alt="beer" class="about__picture" />
+        </figure>
+
+        <div class="about__texts">
+          <p class="about__paragraph">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis
+            vel quia voluptatem cupiditate soluta blanditiis beatae
+            reprehenderit totam fugit. Minus ipsum est rem adipisci aperiam et
+            placeat consequuntur nihil hic.
+          </p>
+          <p class="about__paragraph">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis
+            vel quia voluptatem cupiditate soluta blanditiis beatae
+            reprehenderit totam fugit. Minus ipsum est rem adipisci aperiam et
+            placeat consequuntur nihil hic.
+          </p>
+        </div>
+      </section>
+
+      <!-- views section -->
+      <section id="views" class="projects">
+        <div class="container">
+          <h2 class="subtitle">Vistas de la aplicacion</h2>
+          <div class="projects__grid">
+            <article class="projects__item">
+              <img src="assets/code1.png" alt="code" class="projects__img" />
+              <div class="projects__hover">
+                <h2 class="projects__title">TuPostInc</h2>
+                <i class="far fa-file-alt projects__icon"></i>
+              </div>
+            </article>
+
+            <article class="projects__item">
+              <img src="assets/code2.png" alt="code" class="projects__img" />
+              <div class="projects__hover">
+                <h2 class="projects__title">TuPostInc</h2>
+                <i class="far fa-file-alt projects__icon"></i>
+              </div>
+            </article>
+
+            <article class="projects__item">
+              <img src="assets/code3.png" alt="code" class="projects__img" />
+              <div class="projects__hover">
+                <h2 class="projects__title">TuPostInc</h2>
+                <i class="far fa-file-alt projects__icon"></i>
+              </div>
+            </article>
+
+            <article class="projects__item">
+              <img src="assets/code4.png" alt="code" class="projects__img" />
+              <div class="projects__hover">
+                <h2 class="projects__title">TuPostInc</h2>
+                <i class="far fa-file-alt projects__icon"></i>
+              </div>
+            </article>
+
+            <article class="projects__item">
+              <img src="assets/code5.png" alt="code" class="projects__img" />
+              <div class="projects__hover">
+                <h2 class="projects__title">TuPostInc</h2>
+                <i class="far fa-file-alt projects__icon"></i>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- members section -->
+      <section class="testimony container">
+        <h2 class="subtitle">made with ❤ love by:</h2>
+        <div class="testimony__grid">
+          <article class="testimony__item">
+            <div class="testimony__person">
+              <img
+                src="assets/hackerjfif.jfif"
+                alt="users"
+                class="testimony_img"
+              />
+              <div class="testimony__texts">
+                <h3 class="testimony__name">Novak</h3>
+                <p class="testimony__verification">
+                  Miembro del equipo de desarrollo
+                </p>
+              </div>
+            </div>
+            <p class="testimony__review">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque,
+              nam.
             </p>
-            <a href="#" class="presentation__cta">consigue el codigo</a>
-        </section>
-        
-        <!-- contet section -->
-        <section class="about container">
+          </article>
 
-            <div class="about__texts">
-                <h2 class="subtitle">Librerias:</h2>
-                <p class="about__paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis vel quia voluptatem cupiditate soluta blanditiis beatae reprehenderit totam fugit. Minus ipsum est rem adipisci aperiam et placeat consequuntur nihil hic.</p>
-                <p class="about__paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis vel quia voluptatem cupiditate soluta blanditiis beatae reprehenderit totam fugit. Minus ipsum est rem adipisci aperiam et placeat consequuntur nihil hic.</p>
+          <article class="testimony__item">
+            <div class="testimony__person">
+              <img src="assets/italo.jpg" alt="users" class="testimony_img" />
+              <div class="testimony__texts">
+                <h3 class="testimony__name">Italo</h3>
+                <p class="testimony__verification">
+                  Miembro del equipo de desarrollo
+                </p>
+              </div>
             </div>
+            <p class="testimony__review">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque,
+              nam.
+            </p>
+          </article>
 
-            <figure class="about__img">
-                <img src="assets/css.png" alt="css" class="about__picture">
-            </figure>
-
-            <figure class="about__img about__img--left">
-                <img src="assets/beer.svg" alt="beer" class="about__picture">
-            </figure>
-
-            <div class="about__texts">
-                <h2 class="subtitle">Funciones:</h2>
-                <p class="about__paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis vel quia voluptatem cupiditate soluta blanditiis beatae reprehenderit totam fugit. Minus ipsum est rem adipisci aperiam et placeat consequuntur nihil hic.</p>
-                <p class="about__paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis vel quia voluptatem cupiditate soluta blanditiis beatae reprehenderit totam fugit. Minus ipsum est rem adipisci aperiam et placeat consequuntur nihil hic.</p>
+          <article class="testimony__item">
+            <div class="testimony__person">
+              <img
+                src="assets/nilsonjpg.jpg"
+                alt="users"
+                class="testimony_img"
+              />
+              <div class="testimony__texts">
+                <h3 class="testimony__name">Nilson</h3>
+                <p class="testimony__verification">
+                  Miembro del equipo de desarrollo
+                </p>
+              </div>
             </div>
+            <p class="testimony__review">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque,
+              nam.
+            </p>
+          </article>
 
-        </section>
-
-        <!-- views section -->
-        <section class="projects">
-            <div class="container">
-                <h2 class="subtitle">Vistas de la aplicacion</h2>
-                <div class="projects__grid">
-
-                    <article class="projects__item">
-                        <img src="assets/code1.png" alt="code" class="projects__img">
-                        <div class="projects__hover">
-                            <h2 class="projects__title">TuPostInc</h2>
-                            <i class="far fa-file-alt projects__icon"></i>
-                        </div>
-                    </article>
-
-                    <article class="projects__item">
-                        <img src="assets/code2.jpg" alt="code" class="projects__img">
-                        <div class="projects__hover">
-                            <h2 class="projects__title">TuPostInc</h2>
-                            <i class="far fa-file-alt projects__icon"></i>
-                        </div>
-                    </article>
-
-                    <article class="projects__item">
-                        <img src="assets/code3.png" alt="code" class="projects__img">
-                        <div class="projects__hover">
-                            <h2 class="projects__title">TuPostInc</h2>
-                            <i class="far fa-file-alt projects__icon"></i>
-                        </div>
-                    </article>
-
-                    <article class="projects__item">
-                        <img src="assets/code4.png" alt="code" class="projects__img">
-                        <div class="projects__hover">
-                            <h2 class="projects__title">TuPostInc</h2>
-                            <i class="far fa-file-alt projects__icon"></i>
-                        </div>
-                    </article>
-
-                    <article class="projects__item">
-                        <img src="assets/code5.png" alt="code" class="projects__img">
-                        <div class="projects__hover">
-                            <h2 class="projects__title">TuPostInc</h2>
-                            <i class="far fa-file-alt projects__icon"></i>
-                        </div>
-                    </article>
-                </div>
+          <article class="testimony__item">
+            <div class="testimony__person">
+              <img
+                src="assets/cristianjfif.jfif"
+                alt="users"
+                class="testimony_img"
+              />
+              <div class="testimony__texts">
+                <h3 class="testimony__name">Cristhian</h3>
+                <p class="testimony__verification">
+                  Miembro del equipo de desarrollo
+                </p>
+              </div>
             </div>
-        </section>
-
-        <!-- members section -->
-        <section class="testimony container">
-            <h2 class="subtitle">made with ❤ love by:</h2>
-            <div class="testimony__grid">
-                <article class="testimony__item">
-                    <div class="testimony__person">
-                        <img src="assets/hackerjfif.jfif" alt="users" class="testimony_img">
-                        <div class="testimony__texts">
-                            <h3 class="testimony__name">Novak</h3>
-                            <p class="testimony__verification">Miembro del equipo de desarrollo</p>
-                        </div>
-                    </div>
-                    <p class="testimony__review">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, nam.
-                    </p>
-                </article>
-
-                <article class="testimony__item">
-                    <div class="testimony__person">
-                        <img src="assets/italo.jpg" alt="users" class="testimony_img">
-                        <div class="testimony__texts">
-                            <h3 class="testimony__name">Italo</h3>
-                            <p class="testimony__verification">Miembro del equipo de desarrollo</p>
-                        </div>
-                    </div>
-                    <p class="testimony__review">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, nam.
-                    </p>
-                </article>
-
-                <article class="testimony__item">
-                    <div class="testimony__person">
-                        <img src="assets/nilsonjpg.jpg" alt="users" class="testimony_img">
-                        <div class="testimony__texts">
-                            <h3 class="testimony__name">Nilson</h3>
-                            <p class="testimony__verification">Miembro del equipo de desarrollo</p>
-                        </div>
-                    </div>
-                    <p class="testimony__review">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, nam.
-                    </p>
-                </article>
-
-                <article class="testimony__item">
-                    <div class="testimony__person">
-                        <img src="assets/cristianjfif.jfif" alt="users" class="testimony_img">
-                        <div class="testimony__texts">
-                            <h3 class="testimony__name">Cristhian</h3>
-                            <p class="testimony__verification">Miembro del equipo de desarrollo</p>
-                        </div>
-                    </div>
-                    <p class="testimony__review">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, nam.
-                    </p>
-                </article>
-            </div>
-        </section>
+            <p class="testimony__review">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque,
+              nam.
+            </p>
+          </article>
+        </div>
+      </section>
     </main>
 
     <footer class="footer">
-        <div class="container footer_grid">
-            <nav class="nav nav--footer">
-                <a class="nav__items nav__items--footer" href="">inicio</a>
-                <a class="nav__items nav__items--footer" href="">librerias</a>
-                <a class="nav__items nav__items--footer" href="">funciones</a>
-                <a class="nav__items nav__items--footer" href="">vistas</a>
-            </nav>
+      <div class="container footer_grid">
+        <nav class="nav nav--footer">
+          <a class="nav__items nav__items--footer" href="">inicio</a>
+          <a class="nav__items nav__items--footer" href="#librerias"
+            >librerias</a
+          >
+          <a class="nav__items nav__items--footer" href="#funciones"
+            >funciones</a
+          >
+          <a class="nav__items nav__items--footer" href="#views">vistas</a>
+        </nav>
 
-            <section class="footer__contact">
-                <h3 class="footer__title">Miembros</h3>
-                <div class="footer__icons">
-                    <span class="footer__container-icons">
-                        <a class="fab fa-facebook footer__icon" href="#"></a>
-                    </span>
+        <section class="footer__contact">
+          <h3 class="footer__title">Contactenos</h3>
+          <div class="footer__icons">
+            <span class="footer__container-icons">
+              <a class="fab fa-facebook-f footer__icon" href="#"></a>
+            </span>
 
-                    <span class="footer__container-icons">
-                        <a class="fab fa-twitter footer__icon" href="#"></a>
-                    </span>
+            <span class="footer__container-icons">
+              <a class="fab fa-twitter footer__icon" href="#"></a>
+            </span>
 
-                    <span class="footer__container-icons">
-                        <a class="fab fa-instagram footer__icon" href="#"></a>
-                    </span>
-                </div>
-            </section>
-        </div>
+            <span class="footer__container-icons">
+              <a class="fab fa-instagram footer__icon" href="#"></a>
+            </span>
+          </div>
+        </section>
+      </div>
     </footer>
     <script
       src="https://kit.fontawesome.com/dd9f2ae511.js"
