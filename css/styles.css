@@ -139,6 +139,18 @@ body {
   border-radius: 40px;
 }
 
+.link__buttom{
+  display: inline-block;
+  background-color: rgb(75, 121, 219);
+  color: #fff;
+  text-decoration: none;
+  padding: var(--boton-padding);
+  border-radius: 20px;
+}
+
+.b__tittle{
+  font-weight: bold;
+} 
 .about {
   min-height: 400px;
   display: grid;
@@ -157,7 +169,7 @@ body {
 }
 
 .about__picture {
-  max-width: 80%;
+  max-width: 90%;
 }
 
 .about__paragraph {
