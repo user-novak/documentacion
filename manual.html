@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Manual de mantenimiento</title>
+    <link rel="stylesheet" href="css/manualcss.css" />
+    <link rel="shortcut icon" href="icons/manual.ico" type="image/x-icon">
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="logo">
+          <h1>MANUAL DE MANTENIMIENTO</h1>
+        </div>
+        <nav class="menu">
+          <a class="menu_links" href="#Base de datos">Base de datos</a>
+          <a class="menu_links" href="#Vistas">Vistas</a>
+          <a class="menu_links" href="index.html">Documentacion</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main">
+      <aside class="aside">
+        <a class="main_aside_links" href="#Base de datos">Base de datos</a>
+        <a class="main_aside_links" href="#agregar_campos_vacia">Agregar campos a una tabla vacia</a>
+        <a class="main_aside_links" href="#agregar_campos_datos">Agregar campos a una tabla con datos</a>
+        <a class="main_aside_links" href="#Vistas">Vistas</a>
+        <a class="main_aside_links" href="#pasar_variables_vista">Pasar variables a una vista</a>
+        <a class="main_aside_links" href="#agregar_vista_livewire">Agregar una nueva vista livewire</a>
+      </aside>
+
+      <div class="main_contet">
+        <div class="base_datos">
+          <h2 id="Base de datos">
+            <b class="base_datos_asterisco_mayor">#</b>Base de datos
+          </h2>
+          <div>
+            <h3 id="agregar_campos_vacia">
+              <b class="base_datos_asterisco_menor"> # </b>Agregar campos a una
+              tabla vacia
+            </h3>
+            <p>
+              Para agregar campos a una tabla sin datos, se modifica
+              directamente las migraciones y luego para agregar los cambios
+              ponemos el siguiente comando en nuestra terminal
+            </p>
+            <code class="code">php artisan migrate:fresh</code>
+            <p>
+              Para agregar campos a una tabla sin datos y que utilice seeders
+              utilizar el siguiente comando, despues de modificar las
+              migraciones.
+            </p>
+            <code class="code">php artisan migrate:fresh --seed</code>
+            <div class="base_datos_imgs">
+              <img class="base_datos_img" src="assets/manual1.png" alt="" />
+              <img class="base_datos_img" src="assets/manual2.png" alt="" />
+            </div>
+          </div>
+          <div>
+            <h3 id="agregar_campos_datos">
+              <b class="base_datos_asterisco_menor"> # </b>Agregar campos a una
+              tabla con datos
+            </h3>
+            <p>
+              Para agregar un nuevo campo a una base de datos con registros,
+              ponemos en nuestra terminal el siguiente comando
+            </p>
+            <code class="code"
+              >php artisan make:migration add_"nombre del campo que desea
+              agregar"_to_"nombre de la tabla a la que se le
+              agregara"_table</code
+            >
+            <p>
+              Luego de eso ir a la migracion creada y agregar los nuevos campos
+              en la funcion up.
+              <b
+                >Todos los campos que se agreguen deben tener el atributo
+                "nullable"</b
+              >
+            </p>
+            <code class="code">$table->string("campo_nuevo")->nullable();</code>
+            <p>ahora modificamos el metodo "down":</p>
+            <code class="code">$table->dropColumn('"campo_nuevo"');</code>
+            <p>
+              Finalmente ejecutamos el siguiente comando y ya tendriamos todo
+              listo
+            </p>
+            <code class="code">php artisan migrate</code>
+            <div class="base_datos_imgs">
+              <img class="base_datos_img" src="assets/manual3.png" alt="" />
+              <img class="base_datos_img" src="assets/manual4.png" alt="" />
+              <img class="base_datos_img" src="assets/manual5.png" alt="" />
+              <img class="base_datos_img" src="assets/manual6.png" alt="" />
+            </div>
+          </div>
+        </div>
+
+        <div class="vistas">
+          <h2 id="Vistas">
+            <b class="base_datos_asterisco_mayor">#</b> Vistas
+          </h2>
+          <div>
+            <h3 id="pasar_variables_vista">
+              <b class="base_datos_asterisco_menor"> # </b>Pasar variables a una
+              vista
+            </h3>
+            <p>
+              Cualquier variable que deseemos pasar a nuestra vista, ya sea un
+              valor numerico, texto, array , etc. Debera ser declarado en el
+              controlador de dicha vista, para que esto ocurra debemos crear una
+              funcion publica(en caso de que nuestro controlador solo tenga una
+              funcion, a esa funcion se la llama "__invoke por convencion")
+            </p>
+            <code class="code">public function __invoke(){}</code>
+            <p>Dentro de la funcion definimos la varaible que deseamos pasar</p>
+            <code class="code">$variable = "texto de prueba"</code>
+            <p>
+              Una vez declarada la variable, usando la funcion compact se pasara
+              la varaible a la vista(se pueden pasar "n" variables).
+            </p>
+            <code class="code">
+              return view('vista_ejemplo', compact('variable'));</code
+            >
+            <div class="base_datos_imgs">
+              <img class="base_datos_img" src="assets/manual7.png" alt="" />
+            </div>
+          </div>
+
+          <div>
+            <h3 id="agregar_vista_livewire">
+              <b class="base_datos_asterisco_menor"> # </b>Agregar una nueva
+              vista "livewire"
+            </h3>
+            <p>
+              Cuando deseemos agregar una nueva vista que use livewire,
+              empezaremos poniendo el siguiente comando en la terminal
+            </p>
+            <code class="code"
+              >php artisan make:livewire "NombredelaVista"</code
+            >
+            <p>
+              Obtendremos un controlador que se encontrara en una carpeta
+              llamada "livewire" dentro de la carpeta de controladores y
+              obtendremos una vista ubicada en una carpeta llamada "livewire"
+              que se encontrara en la carpeta de las vistas. Para llamar al
+              componente livewire pondremos en la vista la siguiente linea de
+              codigo
+            </p>
+            <code class="code">@livewire('NombredelaVista')</code>
+            <p>
+              <b
+                >Todo codigo del componente debe ser escrito dentro de un div
+              </b>
+            </p>
+            <div class="base_datos_imgs">
+              <img class="base_datos_img" src="assets/manual8.png" alt="" />
+              <img class="base_datos_img" src="assets/manual9.png" alt="" />
+              <img class="base_datos_img" src="assets/manual10.png" alt="" />
+              <img class="base_datos_img" src="assets/manual11.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
