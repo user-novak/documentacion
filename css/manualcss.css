@@ -116,9 +116,10 @@ h1 {
 }
 
 @media screen and (max-width: 500px) {
+
   .main {
     display: grid;
-    grid-template-columns: 20% 80%;
+    grid-template-columns: 35% 65%;
     gap: 10px;
   }
 
@@ -156,10 +157,16 @@ h1 {
   }
 
   .logo {
-    margin: 0 0 20px 120px;
+    margin: 0 0 15px 0;
     padding: 0;
     display: flex;
-    justify-content: center;
+    align-items: center;
     color: #ff5c58;
+  }
+
+
+
+  body{
+    font-size: small;
   }
 }
