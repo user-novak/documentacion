@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <title>Manual de mantenimiento</title>
     <link rel="stylesheet" href="css/manualcss.css" />
-    <link rel="shortcut icon" href="icons/manual.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="icons/manual.ico" type="image/x-icon" />
   </head>
   <body>
     <header class="header">
@@ -22,12 +22,24 @@
 
     <main class="main">
       <aside class="aside">
-        <a class="main_aside_links" href="#Base de datos">Base de datos</a>
-        <a class="main_aside_links" href="#agregar_campos_vacia">Agregar campos a una tabla vacia</a>
-        <a class="main_aside_links" href="#agregar_campos_datos">Agregar campos a una tabla con datos</a>
-        <a class="main_aside_links" href="#Vistas">Vistas</a>
-        <a class="main_aside_links" href="#pasar_variables_vista">Pasar variables a una vista</a>
-        <a class="main_aside_links" href="#agregar_vista_livewire">Agregar una nueva vista livewire</a>
+        <div class="aside_menu">
+          <a class="main_aside_links" href="#Base de datos"
+            >Base de datos</a
+          >
+          <a class="main_aside_links" href="#agregar_campos_vacia"
+            >Agregar campos a una tabla vacia</a
+          >
+          <a class="main_aside_links" href="#agregar_campos_datos"
+            >Agregar campos a una tabla con datos</a
+          >
+          <a class="main_aside_links" href="#Vistas">Vistas</a>
+          <a class="main_aside_links" href="#pasar_variables_vista"
+            >Pasar variables a una vista</a
+          >
+          <a class="main_aside_links" href="#agregar_vista_livewire"
+            >Agregar una nueva vista livewire</a
+          >
+        </div>
       </aside>
 
       <div class="main_contet">
@@ -47,8 +59,8 @@
             </p>
             <code class="code">php artisan migrate:fresh</code>
             <p>
-              Para agregar campos a una tabla sin datos y que utilice seeders
-              utilizar el siguiente comando, despues de modificar las
+              Para agregar campos a una tabla sin datos y que utilice los
+              seeders, utilizar el siguiente comando, despues de modificar las
               migraciones.
             </p>
             <code class="code">php artisan migrate:fresh --seed</code>

@@ -33,12 +33,12 @@ h1 {
   gap: 60px;
 }
 
-.aside {
+.aside_menu {
   display: flex;
   flex-direction: column;
   align-items: center;
   position: sticky;
-  top: 0;
+  top: 300px;
   margin-top: 25%;
   gap: 10px;
 }
@@ -113,4 +113,53 @@ h1 {
 .main_aside_links:hover {
   font-size: 150%;
   color: #ff5c58;
+}
+
+@media screen and (max-width: 500px) {
+  .main {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    gap: 10px;
+  }
+
+  .header {
+    margin-top: 0;
+    padding-top: 0;
+    background-image: url(https://cdn.pixabay.com/photo/2017/11/12/18/32/book-2943383_960_720.png);
+    height: 200px;
+    background-size: cover;
+  }
+
+  .base_datos_img {
+    height: 100px;
+    width: auto;
+  }
+
+  .aside_menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: sticky;
+    top: 50px;
+    margin-top: 25%;
+    gap: 10px;
+  }
+
+  .main_aside_links {
+    color: #fe8f8f;
+    font-size: small;
+  }
+  
+  .main_aside_links:hover {
+    font-size: 100%;
+    color: #ff5c58;
+  }
+
+  .logo {
+    margin: 0 0 20px 120px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    color: #ff5c58;
+  }
 }
