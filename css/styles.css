@@ -65,6 +65,10 @@ body {
   border: 1px solid #fff;
 }
 
+.nav__items:hover{
+  border: 2px solid #155AF0;
+}
+
 .nav__items--footer {
   padding: 10px;
 }
